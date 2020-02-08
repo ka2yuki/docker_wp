@@ -1,4 +1,12 @@
-`docker-compose -f [yml-file-name] up -d`
+```sh
+# Up
+docker-compose -f [yml-file-name] up -d
+
+# Login: (基本 mount するので、使わない.)
+docker exec -it [container-name] /bin/bash
+# Login: to Mysql image
+docker exec -it コンテナID mysql -u root -p
+```
 
 ## 📖 [Docker-compose.yml リファレンス](http://docs.docker.jp/compose/compose-file.html#container-name)
 
