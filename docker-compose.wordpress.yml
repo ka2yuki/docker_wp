@@ -2,8 +2,8 @@ version: '2'
 
 services:
   db:
-    image: mysql:5.6
-    container_name: mysql
+    image: mysql:5.7
+    container_name: mysql2
     volumes:
      - "./.data/db:/var/lib/mysql"
     restart: always
@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: wordpress
   wordpress:
     image: wordpress:latest
-    container_name: wp
+    container_name: wp2
     depends_on:
      - db
     links:
