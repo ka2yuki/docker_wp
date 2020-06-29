@@ -1,11 +1,21 @@
 ```sh
 # Up
 docker-compose -f [yml-file-name] up -d
+```
+1. PORTS で ブラウザから アクセス
 
-# Login: (基本 mount するので、使わない.)
-docker exec -it [container-name] /bin/bash
+できなければ, 
+- STATSU が UP か 確認。
+- docker containers stop rm など
+
+```sh
 # Login: to Mysql image
 docker exec -it コンテナID mysql -u root -p
+
+# Login: WP Server
+# (基本ローカルに Mount するので、使わない.)
+docker exec -it [container-name] /bin/bash
+
 ```
 
 ## 📖 [Docker-compose.yml リファレンス](http://docs.docker.jp/compose/compose-file.html#container-name)
