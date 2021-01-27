@@ -2,9 +2,12 @@
 # Up
 docker-compose -f [yml-file-name] up -d
 ```
-1. PORTS で ブラウザから アクセス
+[ブラウザ確認する↗️](http://localhost:8080)
+# Error
+##### `Error establishing a database connection`
+- Docker リスタート。✅
 
-できなければ, 
+# その他
 - STATSU が UP か 確認。
 - docker containers stop rm など
 
@@ -22,16 +25,13 @@ docker exec -it [container-name] /bin/bash
 
 - [単一ホスト上で複数の環境を分離する](http://docs.docker.jp/compose/overview.html#multiple-isolated-environments-on-a-single-host)
 - [コンテナ作成時にボリューム・データの保持](http://docs.docker.jp/compose/overview.html#preserve-volume-data-when-containers-are-created)
-  > 以前に実行済みのコンテナが見つかれば、古いコンテナから新しいコンテナにボリュームをコピーします。この処理により、ボリューム内で作成したデータを失わないように守ります。
+  > 以前に、実行済みのコンテナが見つかれば、古いコンテナから新しいコンテナにボリュームを **コピー**~~ します。この処理により、ボリューム内で作成したデータを失わないように守ります。
 
 # Docker install
 
 - [docker-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 - [docker-win](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-# DB data
+# DataBase: DATA
 
-docker-compose.yml があるプロジェクトのディレクトリ内に  
-`./.data/db` ディレクトリを自動的に作成します。  
-wordpress がデータベースに対して更新したあらゆるデータは、  
-このディレクトリで保持します。
+`./.data/db`：自動的に、作成。  
