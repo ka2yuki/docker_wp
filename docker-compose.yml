@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wp
+    depends_on:
+     - mysql
+    links:
+     - mysql
+    ports:
+     - "8080:80" # ポート番号の設定
+    restart: always
+    volumes:
+     - ./www/html:/var/www/html/
+    #  - ./wp-content:/var/www/html/wp-content
+    env_file: .env # 環境変数の定義に.envを利用
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+     - "./.data/db:/var/lib/mysql"
+    restart: always
+    env_file: .env # 環境変数の定義に.envを利用
+    ports:
+      - "3306:3306" #ポート番号の設定
+# volumes:
+#   db_data:
