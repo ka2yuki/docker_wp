@@ -1,3 +1,6 @@
+## 🚨 WordPres開発環境 は, 
+## SERVER のみで 十分!! 🚨
+️
 # Start
 - docker stop
 - docker restart
