@@ -1,57 +1,59 @@
-# Start
-- docker stop
-- docker restart
+# Install Docker Desktop
+- Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
-```sh
-docker-compose -f docker-compose.yml up -d 
-# check 
-docker ps
-```
-[ブラウザ確認する↗️](http://localhost:8080)
-Sample: [docker-compose.yml](https://docs.docker.jp/compose/wordpress.html)
-[env_file](https://docs.docker.jp/compose/compose-file.html#env-file)
+## 開発環境をインストール
+- Docker Dessktop の 検索窓に「wordpress」と入力
+- 「Run」ボタンを押す
 
-# Error
-##### `Error establishing a database connection`
-- Docker リスタート。✅
-- docker-composeの環境設定が間違えてた。`WORDPRESS_DB_HOST=[services-db-name]:3306` ✅
-- MysqlがRestart中な可能性がある。`docker ps`待機。
-1. PHP7系では「caching_sha2_password」をサポートする接続ライブラリがなく、****
-2. MySQL8.0では、新たな認証プラグイン「caching_sha2_password」が導入されてる。
+[Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
 
-##### `WordPress データベースエラー: [Unknown database 'wordpress']`
+## :pencil: memo
+### wordpress CLI
 
-# その他
-- STATSU が UP か 確認。
-  - `docker-compose ps [cmd]`
-  - `docker stop [name]`
-  - `docker rm [name]`
-  - `docker images -a`
-  - `docker rmi [mysql IMAGE ID]`
-  - `docker stop wp mysql && docker rm wp mysql`
+| Command | 概要 |
+| :--- | :--- |
+| [wp admin](https://developer.wordpress.org/cli/commands/admin/) | ブラウザで `/wp-admin/`を開く |
+| wp cache | WPオブジェクトのCacheObjectの 操作 |
+| wp cap | ユーザー権限の操作 |
+| wp cli |  |
+| wp comment |  |
+| wp config |  |
+| wp core |  |
+| wp db |  |
+| wp dist-archive |  |
+| wp embed | |
+| wp eval | |
+| wp eval-file | |
+| wp export | |
+| wp find | |
+| wp help | |
+| wp i18n | |
+| wp import | |
+| wp language | |
+| wp maintenance-mode | |
+| wp media | |
+| wp menu | |
+| wp network | |
+| wp option | |
+| wp package | |
+| wp plugin ||
+| wp post ||
+| wp post-type||
+| wp profile ||
+| wp rewrite ||
+| wp role ||
+| wp scaffold ||
+| wp search-replace ||
+| wp server ||
+| wp shell ||
+| wp sidebar ||
+| wp site ||
+| wp super-admin ||
+| wp taxonomy ||
+| wp term ||
+| wp theme ||
+| wp transient ||
+| wp user ||
+| wp widget ||
 
-# Tips
-##### Mysqlログイン(image)
-```sh
-docker exec -it [コンテナID] mysql -u root -p
-```
-
-##### WPサーバーログイン(image)
-(基本ローカルに Mount するので、使わない.)
-```sh
-docker exec -it [container-name] /bin/bash
-```
-
-## 📖 [Docker-compose.yml リファレンス](http://docs.docker.jp/compose/compose-file.html#container-name)
-- [単一ホスト上で複数の環境を分離する](http://docs.docker.jp/compose/overview.html#multiple-isolated-environments-on-a-single-host)
-- [コンテナ作成時にボリューム・データの保持](http://docs.docker.jp/compose/overview.html#preserve-volume-data-when-containers-are-created)
-  > 以前に、実行済みのコンテナが見つかれば、古いコンテナから新しいコンテナにボリュームを **コピー**~~ します。この処理により、ボリューム内で作成したデータを失わないように守ります。
-
-# Docker install
-
-- [docker-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
-- [docker-win](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-
-# DataBase: DATA
-
-`./.data/db`：自動的に、作成。  
+more: [WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
