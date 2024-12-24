@@ -10,12 +10,7 @@
 - What [Docker Engine](https://docs.docker.com/engine/install) install
 
 # check
-```sh
-docker-compose -f docker-compose.yml up -d 
-# check 
-docker ps
-```
-[ブラウザ確認する↗️](http://localhost:8080)：
+
 - Sample: 
   - [docker-compose.yml](https://docs.docker.jp/compose/wordpress.html)
   - [env_file](https://docs.docker.jp/compose/compose-file.html#env-file)

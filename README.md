@@ -1,5 +1,5 @@
 [進捗：Private](https://github.com/users/ka2yuki/projects/10)  
-- [ ] コンテナ内の/var/www/html/wp-content/theme/:作業ディレクトリ を同期させたい
+- [x] コンテナ内の/var/www/html/wp-content/theme/:作業ディレクトリ を同期させたい
 
 # 📦アプリInstall DockerDesktop
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
@@ -11,12 +11,37 @@
 
 Docker Official Image: [Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
 
+# 実行
+```sh
+docker-compose -f docker-compose.yml up --watch # also use -w
+# check 
+docker ps
+```
+[http://localhost:8080](http://localhost:8080)
+
+# Restart
+```sh
+# Containers
+docker container stop wp mysql && docker container rm wp mysql
+# Volumes
+docker volume rm [hoge hoge] # nead to specify id
+```
+
+
 ## :pencil: memo
-Docker Desktopのめも
--  Containers
-  -  Exec: コンテナ内
-  -  Files: コンテナ内ファイルを表しているようです
-  -  Stats: ながめる
+## files
+
+| file/dir name | meaning |
+| :- | :- |
+|`.env`|passwordなど|
+
+### Docker Desktopのめも
+
+-  Tab: Containers
+   -  
+   -  Exec: コンテナ内の　CLI
+   -  Files: コンテナ内の ファイルを表しているみたい
+   -  Stats: ながめる
 
 ### wordpress CLI
 [WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
