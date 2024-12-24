@@ -1,28 +1,60 @@
-version: '2'
+# 参考
+# https://hub.docker.com/_/wordpress
+
+version: '3'
 
 services:
   wordpress:
     image: wordpress:latest
     container_name: wp
+    ports:
+     - "8080:80" # ポート番号の設定
+    restart: always
     depends_on:
      - mysql
     links:
      - mysql
-    ports:
-     - "8080:80" # ポート番号の設定
-    restart: always
     volumes:
-     - ./www/html:/var/www/html/
+     - wordpress:/var/www/html
+    #  - ./www/html:/var/www/html/
     #  - ./wp-content:/var/www/html/wp-content
     env_file: .env # 環境変数の定義に.envを利用
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     container_name: mysql
-    volumes:
-     - "./.data/db:/var/lib/mysql"
-    restart: always
-    env_file: .env # 環境変数の定義に.envを利用
     ports:
       - "3306:3306" #ポート番号の設定
+    restart: always
+    volumes:
+     - db:/var/lib/mysql
+    #  - "./.data/db:/var/lib/mysql"
+    env_file: .env # 環境変数の定義に.envを利用
+
+volumes:
+  wordpress:
+  db:
+
+
+
+###
+# https://hub.docker.com/_/wordpress
+###
+#   wordpress:
+#     image: wordpress
+#     restart: always
+#     ports:
+#       - 8080:80
+#     env_file: .env # 環境変数の定義に.envを利用
+#     volumes:
+#       - wordpress:/var/www/html
+
+#   db:
+#     image: mysql:8.0
+#     restart: always
+#     env_file: .env # 環境変数の定義に.envを利用
+#     volumes:
+#       - db:/var/lib/mysql
+
 # volumes:
-#   db_data:
+#   wordpress:
+#   db:
