@@ -24,7 +24,7 @@ docker volume rm [hoge hoge] # nead to specify id
 
 | file/dir name | meaning |
 | :- | :- |
-|`.env`| passwordなど編集して使う |
+|`.env`| passwordなど編集して使用できる予定たぶん |
 
 ### Docker Desktopのめも
 
