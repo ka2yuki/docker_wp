@@ -13,7 +13,7 @@ services:
     links:
      - mysql
     volumes: # may be specifid only path here. more specify around line:39.
-     - ~/projects/wp-dev:/var/www/html/wp-content/themes
+     - ~/projects/wp:/var/www/html/wp-content/themes
       # Local-Machine : Container✅
 
       # todo: 
