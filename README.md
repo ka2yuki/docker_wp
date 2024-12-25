@@ -1,4 +1,5 @@
 [進捗：Private](https://github.com/users/ka2yuki/projects/10)  
+- [ ] コンテナ内の/var/www/html/wp-content/theme/:作業ディレクトリ を同期させたい
 
 # 📦アプリInstall DockerDesktop
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
@@ -6,10 +7,17 @@
 ## 開発環境をインストール
 1. 🐋DockerDessktop🐋 の 検索窓に「wordpress」と入力
 2. 「Pull」ボタンを押す
+3. Imagesタブ > 「➡️」Runボタンを押す
 
 Docker Official Image: [Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
 
 ## :pencil: memo
+Docker Desktopのめも
+-  Containers
+  -  Exec: コンテナ内
+  -  Files: コンテナ内ファイルを表しているようです
+  -  Stats: ながめる
+
 ### wordpress CLI
 [WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
 | Command | 概要 |
