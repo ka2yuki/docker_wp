@@ -1,25 +1,16 @@
 [進捗：Private](https://github.com/users/ka2yuki/projects/10)  
-- [x] コンテナ内の/var/www/html/wp-content/theme/:作業ディレクトリ を同期させたい
-
-# 📦アプリInstall DockerDesktop
+# 📦Install
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
-## 開発環境をインストール
-1. 🐋DockerDessktop🐋 の 検索窓に「wordpress」と入力
-2. 「Pull」ボタンを押す
-3. Imagesタブ > 「➡️」Runボタンを押す
-
-Docker Official Image: [Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
-
-# 実行
+## :building_construction: Build Develop Env
 ```sh
 docker-compose -f docker-compose.yml up --watch # also use -w
 # check 
 docker ps
 ```
-[http://localhost:8080](http://localhost:8080)
+check on browser [http://localhost:8080](http://localhost:8080)
 
-# Restart
+# :arrows_counterclockwise:Restart
 ```sh
 # Containers
 docker container stop wp mysql && docker container rm wp mysql
@@ -33,7 +24,7 @@ docker volume rm [hoge hoge] # nead to specify id
 
 | file/dir name | meaning |
 | :- | :- |
-|`.env`|passwordなど|
+|`.env`| passwordなど編集して使う |
 
 ### Docker Desktopのめも
 
