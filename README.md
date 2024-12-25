@@ -1,4 +1,5 @@
-[進捗：progress](https://github.com/users/ka2yuki/projects/10)
+[進捗：private progress](https://github.com/users/ka2yuki/projects/10)
+[history](https://github.com/ka2yuki/docker_wp/commits/master/)
 
 # Install Docker Desktop
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
