@@ -1,25 +1,24 @@
-[進捗：private progress](https://github.com/users/ka2yuki/projects/10)
-[history](https://github.com/ka2yuki/docker_wp/commits/master/)
+[進捗：Private](https://github.com/users/ka2yuki/projects/10)  
 
-# Install Docker Desktop
+# アプリInstall Docker Desktop
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
 ## 開発環境をインストール
-- Docker Dessktop の 検索窓に「wordpress」と入力
-- 「Run」ボタンを押す
+1. 🐋DockerDessktop🐋 の 検索窓に「wordpress」と入力
+2. 「Pull」ボタンを押す
 
-[Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
+Docker Official Image: [Wordpress](https://hub.docker.com/_/wordpress) | hub.docker.com
 
 ## :pencil: memo
 ### wordpress CLI
-
+[WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
 | Command | 概要 |
 | :--- | :--- |
 | [wp admin](https://developer.wordpress.org/cli/commands/admin/) | ブラウザで `/wp-admin/`を開く |
 | wp cache | WPオブジェクトのCacheObjectの 操作 |
 | wp cap | ユーザー権限の操作 |
-| wp cli |  |
-| wp comment |  |
+| wp cli | ... |
+| wp comment | |
 | wp config |  |
 | wp core |  |
 | wp db |  |
@@ -60,3 +59,6 @@
 | wp widget ||
 
 more: [WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
+
+---
+[History](https://github.com/ka2yuki/docker_wp/commits/master/)
