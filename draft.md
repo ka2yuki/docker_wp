@@ -1,12 +1,10 @@
 > [!WARNING]
 > このファイルはメモです。
 
-# Goal
-- 作業ディレクトリ上に自動マッピングできて使用できること
-  - issue: Docker環境までリポジトリに含まれてしまう
-- 
 
-# TODO
+# 📖
+- docker-compose.yml
+  - [volumes](https://docs.docker.com/reference/compose-file/services/#volumes)
 - What [Docker Engine](https://docs.docker.com/engine/install) install
 
 # check
@@ -15,7 +13,7 @@
   - [docker-compose.yml](https://docs.docker.jp/compose/wordpress.html)
   - [env_file](https://docs.docker.jp/compose/compose-file.html#env-file)
 
-# :pencil:Tips 
+# :memo:memo 
 良く使用したCommands
 ```sh
 # Status? Up or Down
