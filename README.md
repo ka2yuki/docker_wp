@@ -1,4 +1,4 @@
-[進捗：Private](https://github.com/users/ka2yuki/projects/10)  
+[:bug:問題点：Issue](https://github.com/users/ka2yuki/projects/10)  
 # 📦Install
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
