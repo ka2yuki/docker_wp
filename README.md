@@ -21,6 +21,7 @@ docker volume rm [hoge hoge] # nead to specify id
 
 ## :pencil: memo
 ## files
+[docker-compose:volumes](https://docs.docker.com/reference/compose-file/volumes/)
 
 | file/dir name | meaning |
 | :- | :- |
