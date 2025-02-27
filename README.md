@@ -1,16 +1,17 @@
-[:bug:問題点/課題：Issue](https://github.com/users/ka2yuki/projects/10)  
-# 📦Install
+[:bug: 問題点/課題：Issue](https://github.com/users/ka2yuki/projects/10)  
+
+# 📦install
 - Windows: [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
 
-## :building_construction: Build Develop Env
+## Build Develop Env
 ```sh
 docker-compose -f docker-compose.yml up --watch # also use -w
 # check 
 docker ps
 ```
-check on browser [http://localhost:8080](http://localhost:8080)
+check in browser [http://localhost:port-number](http://localhost:8080)
 
-# :arrows_counterclockwise:Restart
+# restart
 ```sh
 # Containers
 docker container stop wp mysql && docker container rm wp mysql
@@ -19,13 +20,13 @@ docker volume rm [hoge hoge] # nead to specify id
 ```
 
 
-## :pencil: memo
+## :memo:
 ## files
 [docker-compose:volumes](https://docs.docker.com/reference/compose-file/volumes/)
 
 | file/dir name | meaning |
 | :- | :- |
-|`.env`| passwordなど編集して使用できる予定たぶん |
+|`.env`| 多分ignore ファイル。 passwordなど保存しておく。 |
 
 ### Docker Desktopのめも
 

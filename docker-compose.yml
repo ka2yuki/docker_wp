@@ -13,7 +13,7 @@ services:
     links:
      - mysql
     volumes: # may be specifid only path here. more specify around line:39.
-     - ~/projects/wp:/var/www/html/wp-content/themes
+     - ~/projects/wp:/var/www/html
       # Local-Machine : Container✅
 
       # todo: 
@@ -32,8 +32,8 @@ services:
       - "3306:3306"
     restart: always
     volumes:
-     - db:/var/lib/mysql
-    #  - "./.data/db:/var/lib/mysql"
+      # - db:/var/lib/mysql
+      - ./.data/db:/var/lib/mysql
     env_file: .env # wordpress password の定義に .env file
 
 volumes:
